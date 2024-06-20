@@ -41,3 +41,4 @@
   - `jupiter-contact-page.test.ts`: Covers Test Case 1 and Test Case 2.
   - `jupiter-shop-page.test.ts`: Covers Test Case 3.
 - **Allure Report:** Use `allure serve sample-allure-results --host 127.0.0.1` to open the Allure report from a previous test run.
+![Alt Text](allure-report-sample.png)

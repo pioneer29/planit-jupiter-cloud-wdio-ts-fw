@@ -30,7 +30,7 @@ describe("Jupiter Toys - Shop Page Tests", () => {
   // 3. Verify the subtotal for each product is correct
   // 4. Verify the price for each product
   // 5. Verify that total = sum(sub totals)
-  it("Test Case 3: should validate Contact Page error messages", async () => {
+  it("Test Case 3: should validate shop Page, items in cart and sub totals", async () => {
     await ShopPage.open("home");
     await ShopPage.open("shop");
     await ShopPage.clickBuyButton(INPUT_DATA); // Buy 2 Stuffed Frog, 5 Fluffy Bunny, 3 Valentine Bear
