@@ -8,6 +8,7 @@
 - **WebdriverIO:** Browser automation library for UI testing.
 - **TypeScript:** Statically typed superset of JavaScript for enhanced code quality.
 - **Mocha:** Asynchronous testing framework for Node.js and browsers.
+- **Jenkins:** is an open-source automation server that facilitates continuous integration (CI) and continuous delivery (CD) processes.
 - **Allure Report:** Lightweight test reporting tool, integratable with Jenkins.
 - **Spec-reporter:** Built-in reporter for human-readable test results.
 - **Expect-webdriver:** Assertion library for UI testing with WebDriver.
