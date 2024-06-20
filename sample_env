@@ -1,0 +1,4 @@
+RUNTIME_BROWSER: chrome 
+LOG_LEVEL: "info"
+BASE_URL: "https://jupiter.cloud.planittesting.com/#/"
+HEADLESS: "false"

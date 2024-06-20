@@ -1,0 +1,32 @@
+{
+  "name": "planit-jupiter-cloud-wdio-ts-fw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "LOG_LEVEL=debug wdio run ./wdio.conf.ts",
+    "test-jenkins": "LOG_LEVEL=error wdio run ./wdio.conf.ts",
+    "test-local": "rm -r allure-results & env BASE_URL=https://jupiter.cloud.planittesting.com/#/ RUNTIME_BROWSER=chrome LOG_LEVEL=debug wdio run ./wdio.conf.ts & allure serve --host 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "Christian Balangatan",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/allure-reporter": "^8.39.0",
+    "@wdio/cli": "^8.39.0",
+    "@wdio/local-runner": "^8.39.0",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "chromedriver": "^125.0.2",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.5",
+    "wdio-chromedriver-service": "^8.1.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@wdio/globals": "^8.39.0",
+    "@wdio/types": "^8.39.0",
+    "ts-node": "^10.9.2"
+  }
+}

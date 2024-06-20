@@ -1,0 +1,7 @@
+
+#Test Reports
+allure-*/
+# Dependency direcotries
+node_modules/
+# npm's package-lock.json
+*-lock.*
