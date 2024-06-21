@@ -6,7 +6,9 @@
   "scripts": {
     "wdio": "LOG_LEVEL=debug wdio run ./wdio.conf.ts",
     "test-jenkins": "LOG_LEVEL=error wdio run ./wdio.conf.ts",
-    "test-local": "rm -r allure-results & env BASE_URL=https://jupiter.cloud.planittesting.com/#/ RUNTIME_BROWSER=chrome LOG_LEVEL=debug wdio run ./wdio.conf.ts & allure serve --host 127.0.0.1"
+    "test-local": "rm -r allure-results & env BASE_URL=https://jupiter.cloud.planittesting.com/#/ RUNTIME_BROWSER=chrome LOG_LEVEL=debug wdio run ./wdio.conf.ts & allure serve --host 127.0.0.1",
+    "test-local-edge": "rm -r allure-results & env BASE_URL=https://jupiter.cloud.planittesting.com/#/ RUNTIME_BROWSER=edge LOG_LEVEL=debug wdio run ./wdio.conf.ts & allure serve --host 127.0.0.1",
+    "test-local-firefox": "rm -r allure-results & env BASE_URL=https://jupiter.cloud.planittesting.com/#/ RUNTIME_BROWSER=firefox LOG_LEVEL=debug wdio run ./wdio.conf.ts & allure serve --host 127.0.0.1"
   },
   "keywords": [],
   "author": "Christian Balangatan",
@@ -19,6 +21,8 @@
     "@wdio/spec-reporter": "^8.39.0",
     "chromedriver": "^125.0.2",
     "dotenv": "^16.4.5",
+    "edgedriver": "^5.3.10",
+    "geckodriver": "^4.3.3",
     "typescript": "^5.4.5",
     "wdio-chromedriver-service": "^8.1.1",
     "winston": "^3.8.2"
@@ -27,6 +31,8 @@
     "@types/dotenv": "^8.2.0",
     "@wdio/globals": "^8.39.0",
     "@wdio/types": "^8.39.0",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "wdio-edgedriver-service": "^3.0.3",
+    "wdio-geckodriver-service": "^5.0.2"
   }
 }
