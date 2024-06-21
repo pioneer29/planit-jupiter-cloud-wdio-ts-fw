@@ -31,10 +31,18 @@
 - `./wdio.conf.ts`: WebDriverIO configuration for test settings and capabilities.
 
 ### How to Run the Tests:
-1. Open terminal and run: `npm run test-local`
-   - Executes tests located in `./test/specs` folder.
-   - Includes runtime environment variables: `BASE_URL=https://jupiter.cloud.planittesting.com/#/`, `RUNTIME_BROWSER=chrome`, `LOG_LEVEL=debug`.
-   - Opens Allure report at the end of execution.
+1. Open terminal and run: 
+   - For chrome browser: `npm run test-local`
+   - For edge browser: `npm run test-local-edge`
+   - For firefox browser: `npm run test-local-firefox`
+   Notes:
+    - Executes tests located in `./test/specs` folder.
+    - Includes runtime environment variables: 
+        RUNTIME_BROWSER: chrome/edge/firefox
+        LOG_LEVEL: "info"
+        BASE_URL: "https://jupiter.cloud.planittesting.com/#/"
+        HEADLESS: "false"
+    - Opens Allure report at the end of execution.
 
 ### Notes:
 - **Test Coverage:** 
