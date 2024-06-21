@@ -37,7 +37,7 @@
    - For edge browser: `npm run test-local-edge`
    - For firefox browser: `npm run test-local-firefox`
    
-   ## Notes:
+   Notes:
     - Executes tests located in `./test/specs` folder.
     - Includes runtime environment variables: 
         RUNTIME_BROWSER: chrome/edge/firefox
