@@ -36,22 +36,16 @@ switch (runTimeBrowser) {
     break;
 
   case "firefox":
-    runTimeService = "selenium-standalone";
-
+    runTimeService = "geckodriver";
     runTimeCapabilities = [
       {
         maxInstances: maxBrowserInstance,
         browserName: runTimeBrowser,
-        browserVersion: "latest",
-        platformName: "Windows 10",
         "moz:firefoxOptions": {
-          prefs: {
-            "download.default_directory": path.join(process.cwd(), "downloads"),
-          },
           args:
             env.HEADLESS?.toLowerCase() === "true"
-              ? ["--disable-web-security", "-headless"]
-              : ["--disable-web-security"],
+              ? ["--disable-gpu", "--disable-web-security", "-headless"]
+              : ["--disable-gpu"],
         },
       },
     ];
@@ -62,10 +56,11 @@ switch (runTimeBrowser) {
       {
         maxInstances: maxBrowserInstance,
         browserName: "MicrosoftEdge",
-        broswerVersion: "126.0.2592.61",
-        path: "/",
         "ms:edgeOptions": {
-          args: ["--headless", "--disable-gpu"],
+          args:
+            env.HEADLESS?.toLowerCase() === "true"
+              ? ["--disable-gpu", "--disable-web-security", "-headless"]
+              : ["--disable-gpu", "--disable-web-security"],
         },
       },
     ];
@@ -199,6 +194,17 @@ export const config: Options.Testrunner = {
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
   services: [runTimeService],
+
+  // services: [
+  //   [
+  //     "edgedriver",
+  //     {
+  //       // Specify the path to the EdgeDriver binary
+  //       edgedriverCustomPath: "C:\\drivers\\msedgedriver.exe", // Update this path
+  //       port: 9515,
+  //     },
+  //   ],
+  // ],
 
   //
   // Framework you want to run your specs with.
